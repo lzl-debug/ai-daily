@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import ThemeProvider from "@/components/ThemeProvider";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,11 +17,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className="dark">
+    <html lang="zh-CN" className="dark" suppressHydrationWarning>
       <body className="min-h-screen bg-[#0a0a0f] antialiased">
-        <Navbar />
-        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
+          <Footer />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
@@ -31,7 +35,7 @@ function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/5 bg-[#0a0a0f]/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 text-sm font-bold text-white">
+          <div className="logo-bg flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white transition-colors duration-500">
             A
           </div>
           <span className="text-lg font-semibold tracking-tight">
@@ -40,6 +44,7 @@ function Navbar() {
           </span>
         </Link>
         <div className="flex items-center gap-1">
+          <ThemeSwitcher />
           <span className="hidden sm:flex items-center gap-1 text-xs text-white/30 bg-white/5 px-3 py-1.5 rounded-full">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-glow" />
             每日更新
