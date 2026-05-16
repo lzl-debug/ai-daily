@@ -2,7 +2,6 @@
 
 import { Suspense, useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import Link from "next/link";
 
 export default function SearchPageClient() {
   return (
@@ -30,6 +29,7 @@ function SearchContent() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
+  const [searchSource, setSearchSource] = useState("");
 
   const doSearch = useCallback(async (q: string) => {
     if (!q.trim()) {
@@ -40,10 +40,11 @@ function SearchContent() {
     setLoading(true);
     setSearched(true);
     try {
-      const res = await fetch(`/api/news?q=${encodeURIComponent(q)}`);
+      const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
       if (res.ok) {
         const data = await res.json();
-        setResults(data);
+        setResults(data.results || []);
+        setSearchSource(data.source || "");
       }
     } catch {
       // ignore
@@ -52,7 +53,6 @@ function SearchContent() {
     }
   }, []);
 
-  // Search on initial load if query exists
   useEffect(() => {
     if (initialQ) {
       setQuery(initialQ);
@@ -75,7 +75,7 @@ function SearchContent() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="搜索 AI 资讯..."
+          placeholder="搜索全网 AI 资讯..."
           className="w-full rounded-xl border px-5 py-4 pr-14 text-base outline-none transition-all"
           style={{
             backgroundColor: "var(--bg-card)",
@@ -106,14 +106,21 @@ function SearchContent() {
 
         {!loading && searched && (
           <>
-            <p className="text-sm mb-4" style={{ color: "var(--text-secondary)" }}>
-              找到 {results.length} 条结果
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+                找到 {results.length} 条结果
+              </p>
+              {searchSource === "hn+local" && (
+                <span className="text-[10px] rounded-full px-2 py-0.5" style={{ color: "var(--text-dim)", backgroundColor: "var(--badge-bg)" }}>
+                  来源: Hacker News + AI Daily
+                </span>
+              )}
+            </div>
             {results.length === 0 ? (
               <div className="text-center py-16">
                 <div className="text-4xl mb-4">🔍</div>
                 <p className="text-lg font-medium" style={{ color: "var(--text-secondary)" }}>
-                  没有找到相关资讯
+                  没有找到相关结果
                 </p>
                 <p className="text-sm mt-2" style={{ color: "var(--text-dim)" }}>
                   试试其他关键词
@@ -133,7 +140,7 @@ function SearchContent() {
           <div className="text-center py-16">
             <div className="text-5xl mb-4">🔎</div>
             <p style={{ color: "var(--text-dim)" }} className="text-sm">
-              输入关键词搜索 AI 相关资讯
+              搜索全网 AI 相关资讯
             </p>
           </div>
         )}
@@ -150,15 +157,19 @@ function ResultCard({ item, query }: { item: SearchResult; query: string }) {
 
   function highlight(text: string) {
     if (!query.trim()) return text;
-    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const parts = text.split(new RegExp(`(${escaped})`, "gi"));
-    return parts.map((part, i) =>
-      part.toLowerCase() === query.toLowerCase() ? (
-        <span key={i} style={{ color: "var(--accent-text, #60a5fa)", fontWeight: 600 }}>{part}</span>
-      ) : (
-        part
-      )
-    );
+    try {
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const parts = text.split(new RegExp(`(${escaped})`, "gi"));
+      return parts.map((part, i) =>
+        part.toLowerCase() === query.toLowerCase() ? (
+          <span key={i} style={{ color: "var(--accent-text, #60a5fa)", fontWeight: 600 }}>{part}</span>
+        ) : (
+          part
+        )
+      );
+    } catch {
+      return text;
+    }
   }
 
   return (
