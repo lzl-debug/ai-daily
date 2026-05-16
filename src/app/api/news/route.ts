@@ -150,15 +150,29 @@ export async function GET(request: Request) {
     result = seedData.filter((item) => item.category === category);
   }
 
-  // Search filter
+  // Search filter with token-level matching and relevance ranking
   if (searchQuery) {
-    const q = searchQuery.toLowerCase();
-    result = result.filter(
-      (item) =>
-        item.title?.toLowerCase().includes(q) ||
-        item.content?.toLowerCase().includes(q) ||
-        item.source?.toLowerCase().includes(q)
-    );
+    const tokens = searchQuery.toLowerCase().trim().split(/\s+/).filter(Boolean);
+
+    result = result.filter((item) => {
+      if (tokens.length === 0) return false;
+      const text = [item.title, item.content, item.source]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return tokens.some((token) => text.includes(token));
+    });
+
+    // Sort by relevance: more token matches + title matches ranked higher
+    result.sort((a: any, b: any) => {
+      const aText = [a.title, a.content, a.source].filter(Boolean).join(" ").toLowerCase();
+      const bText = [b.title, b.content, b.source].filter(Boolean).join(" ").toLowerCase();
+      const aScore = tokens.filter((t) => aText.includes(t)).length;
+      const bScore = tokens.filter((t) => bText.includes(t)).length;
+      const aTitleBonus = tokens.filter((t) => (a.title || "").toLowerCase().includes(t)).length * 3;
+      const bTitleBonus = tokens.filter((t) => (b.title || "").toLowerCase().includes(t)).length * 3;
+      return bScore + bTitleBonus - (aScore + aTitleBonus);
+    });
   }
 
   return NextResponse.json(result, {

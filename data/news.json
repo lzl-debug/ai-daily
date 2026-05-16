@@ -568,5 +568,165 @@
     "source": "LangChain Blog",
     "category": "ai-ecosystem",
     "date": "2026-05-11"
+  },
+  {
+    "id": "frontend-5",
+    "title": "CodeGPT 发布全新 Agent 模式：理解整个项目上下文",
+    "link": "https://www.codegpt.com/",
+    "content": "CodeGPT 推出 Agent 模式，可扫描并理解整个项目代码库，支持跨文件重构、自动修复 Bug 和生成单元测试，上下文窗口支持 200K tokens。",
+    "pubDate": "2026-05-10T11:00:00.000Z",
+    "source": "CodeGPT",
+    "category": "frontend-ai",
+    "date": "2026-05-10"
+  },
+  {
+    "id": "frontend-6",
+    "title": "StackBlitz 推出 AI 辅助在线 IDE：浏览器端全栈开发",
+    "link": "https://stackblitz.com/",
+    "content": "StackBlitz 发布 AI 辅助在线 IDE，支持在浏览器中完成全栈开发，集成了 AI 代码生成、自动补全和调试功能，无需本地环境配置。",
+    "pubDate": "2026-05-08T10:00:00.000Z",
+    "source": "StackBlitz",
+    "category": "frontend-ai",
+    "date": "2026-05-08"
+  },
+  {
+    "id": "backend-5",
+    "title": "Cloudflare Workers 支持 AI 推理：边缘计算 AI 时代",
+    "link": "https://blog.cloudflare.com/",
+    "content": "Cloudflare 宣布 Workers 平台支持直接运行 AI 推理任务，开发者可在边缘节点部署 Llama 和 Mistral 模型，延迟低于 10ms。",
+    "pubDate": "2026-05-09T10:00:00.000Z",
+    "source": "Cloudflare",
+    "category": "backend-ai",
+    "date": "2026-05-09"
+  },
+  {
+    "id": "backend-6",
+    "title": "LlamaIndex 发布 v0.12：支持 100+ 数据源接入",
+    "link": "https://www.llamaindex.ai/",
+    "content": "LlamaIndex v0.12 大幅扩展数据连接器生态，支持接入超过 100 种数据源，包括 Notion、Slack、Google Drive 等，Agent 可直接查询企业数据。",
+    "pubDate": "2026-05-07T14:00:00.000Z",
+    "source": "LlamaIndex",
+    "category": "backend-ai",
+    "date": "2026-05-07"
+  },
+  {
+    "id": "backend-7",
+    "title": "Hugging Face 发布 Text Generation Inference v3：推理速度翻倍",
+    "link": "https://huggingface.co/blog",
+    "content": "Hugging Face 发布 TGI v3，通过 PagedAttention 和 FlashAttention 3 优化，LLM 推理吞吐量提升 2 倍，支持多 LoRA adapter 动态加载。",
+    "pubDate": "2026-05-05T09:00:00.000Z",
+    "source": "Hugging Face",
+    "category": "backend-ai",
+    "date": "2026-05-05"
+  },
+  {
+    "id": "research-5",
+    "title": "UC Berkeley 发布 Gorilla 2：API 调用准确率超 GPT-4",
+    "link": "https://gorilla.cs.berkeley.edu/",
+    "content": "UC Berkeley 发布 Gorilla 2 模型，在 API 函数调用任务上准确率超越 GPT-4，支持 1500+ 公开 API 的精准调用，为 AI Agent 提供更可靠的工具使用能力。",
+    "pubDate": "2026-05-07T09:00:00.000Z",
+    "source": "UC Berkeley",
+    "category": "research",
+    "date": "2026-05-07"
+  },
+  {
+    "id": "research-6",
+    "title": "MIT 研究：小型专用模型在特定任务上可超越通用大模型",
+    "link": "https://news.mit.edu/",
+    "content": "MIT 最新研究表明，针对特定领域微调的小型模型（7B-13B 参数）在金融、法律、医疗等垂直任务上可超越 GPT-4 等通用大模型，且推理成本降低 90%。",
+    "pubDate": "2026-05-04T10:00:00.000Z",
+    "source": "MIT News",
+    "category": "research",
+    "date": "2026-05-04"
+  },
+  {
+    "id": "tools-5",
+    "title": "Perplexity AI 发布 Deep Research 模式：深度研究自动生成",
+    "link": "https://blog.perplexity.ai/",
+    "content": "Perplexity AI 推出 Deep Research 功能，可自动进行多轮搜索、交叉验证信息源并生成长篇研究报告，支持 PDF 和表格输出。",
+    "pubDate": "2026-05-08T11:00:00.000Z",
+    "source": "Perplexity AI",
+    "category": "tools",
+    "date": "2026-05-08"
+  },
+  {
+    "id": "tools-6",
+    "title": "Notion AI 新增知识图谱功能：自动关联你的所有笔记",
+    "link": "https://www.notion.so/blog",
+    "content": "Notion AI 推出知识图谱功能，自动分析笔记之间的关联语义，生成可视化知识网络，并支持基于图谱的智能推荐和问答。",
+    "pubDate": "2026-05-06T09:00:00.000Z",
+    "source": "Notion",
+    "category": "tools",
+    "date": "2026-05-06"
+  },
+  {
+    "id": "opensource-5",
+    "title": "vLLM 发布 v0.8：支持 1000+ GPU 分布式推理",
+    "link": "https://github.com/vllm-project/vllm",
+    "content": "开源 LLM 推理引擎 vLLM v0.8 发布，支持跨 1000+ GPU 的分布式推理，通过改进的调度算法实现 99% 的 GPU 利用率，成为企业部署首选方案。",
+    "pubDate": "2026-05-07T11:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source",
+    "date": "2026-05-07"
+  },
+  {
+    "id": "opensource-6",
+    "title": "Langfuse 开源 LLM 可观测平台：监控、调试和评估",
+    "link": "https://github.com/langfuse/langfuse",
+    "content": "开源的 LLM 可观测平台 Langfuse 发布 v3.0，提供 LLM 调用追踪、延迟监控、成本分析和在线评估，帮助团队调试和优化 AI 应用。",
+    "pubDate": "2026-05-04T10:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source",
+    "date": "2026-05-04"
+  },
+  {
+    "id": "design-4",
+    "title": "Adobe Firefly 视频模型上线：Premiere Pro 原生集成",
+    "link": "https://blog.adobe.com/",
+    "content": "Adobe Firefly 推出 AI 视频生成功能，原生集成到 Premiere Pro 中，支持文字生成视频片段、智能素材扩展和自动颜色匹配。",
+    "pubDate": "2026-05-07T10:00:00.000Z",
+    "source": "Adobe",
+    "category": "ai-design",
+    "date": "2026-05-07"
+  },
+  {
+    "id": "design-5",
+    "title": "DALL-E 4 发布：3D 感知图像生成与多视角一致",
+    "link": "https://openai.com/blog/",
+    "content": "OpenAI 发布 DALL-E 4，首次实现 3D 感知图像生成，生成的物体可从任意角度查看且保持视角一致性，支持 4K 分辨率输出。",
+    "pubDate": "2026-05-05T10:00:00.000Z",
+    "source": "OpenAI",
+    "category": "ai-design",
+    "date": "2026-05-05"
+  },
+  {
+    "id": "design-6",
+    "title": "Stability AI 发布 Stable Diffusion 4：实时生成 1080p 图像",
+    "link": "https://stability.ai/",
+    "content": "Stability AI 发布 Stable Diffusion 4，可在消费级 GPU 上实时生成 1080p 图像，新增构图控制和风格一致性功能，推理速度提升 5 倍。",
+    "pubDate": "2026-05-02T10:00:00.000Z",
+    "source": "Stability AI",
+    "category": "ai-design",
+    "date": "2026-05-02"
+  },
+  {
+    "id": "industry-5",
+    "title": "Anthropic 估值突破 600 亿美元，Claude 企业客户增长 300%",
+    "link": "https://www.anthropic.com/",
+    "content": "Anthropic 完成新一轮融资，估值突破 600 亿美元。Claude 企业版客户数同比增长 300%，金融、医疗和科技行业采用率最高。",
+    "pubDate": "2026-05-06T10:00:00.000Z",
+    "source": "Anthropic",
+    "category": "industry",
+    "date": "2026-05-06"
+  },
+  {
+    "id": "industry-6",
+    "title": "日本发布 AI 监管框架：注重创新与安全的平衡",
+    "link": "https://www.meti.go.jp/",
+    "content": "日本经济产业省发布 AI 监管框架草案，采取基于风险的分级管理方式，对高风险 AI 应用实施强制性评估，同时为初创企业提供创新沙盒。",
+    "pubDate": "2026-05-03T06:00:00.000Z",
+    "source": "METI Japan",
+    "category": "industry",
+    "date": "2026-05-03"
   }
 ]
