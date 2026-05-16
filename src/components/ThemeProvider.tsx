@@ -32,13 +32,15 @@ interface ThemeCtx {
   themes: Theme[];
 }
 
+const defaultTheme: Theme = { id: "sunset", name: "日落", mode: "light", colors: ["#fbbf24", "#f97316", "#ef4444"] };
+
 function findTheme(id: string, mode: "dark" | "light"): Theme {
   const found = themes.find((t) => t.id === id && t.mode === mode);
-  return found || themes[0];
+  return found || defaultTheme;
 }
 
 const ThemeContext = createContext<ThemeCtx>({
-  theme: themes[0],
+  theme: defaultTheme,
   setTheme: () => {},
   themes,
 });
@@ -48,7 +50,7 @@ export function useTheme() {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(themes[0]);
+  const [theme, setThemeState] = useState<Theme>(defaultTheme);
   const [mounted, setMounted] = useState(false);
 
   // Restore saved theme on mount
@@ -60,7 +62,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
         const parsed = JSON.parse(saved);
         // Handle legacy format (just a theme id string)
         if (typeof parsed === "string") {
-          const found = themes.find((t) => t.id === parsed && t.mode === "dark");
+          const found = themes.find((t) => t.id === parsed && t.mode === "light");
           if (found) setThemeState(found);
         } else {
           const found = findTheme(parsed.id, parsed.mode);
@@ -91,14 +93,14 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
         try {
           const parsed = JSON.parse(saved);
           if (typeof parsed === "string") {
-            document.documentElement.setAttribute("data-mode", "dark");
+            document.documentElement.setAttribute("data-mode", "light");
             document.documentElement.setAttribute("data-theme", parsed);
           } else {
-            document.documentElement.setAttribute("data-mode", parsed.mode || "dark");
+            document.documentElement.setAttribute("data-mode", parsed.mode || "light");
             document.documentElement.setAttribute("data-theme", parsed.id);
           }
         } catch {
-          document.documentElement.setAttribute("data-mode", "dark");
+          document.documentElement.setAttribute("data-mode", "light");
         }
       }
     }
@@ -114,17 +116,17 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
           if (s) {
             var p = JSON.parse(s);
             if (typeof p === "string") {
-              document.documentElement.setAttribute("data-mode", "dark");
+              document.documentElement.setAttribute("data-mode", "light");
               document.documentElement.setAttribute("data-theme", p);
             } else {
-              document.documentElement.setAttribute("data-mode", p.mode || "dark");
+              document.documentElement.setAttribute("data-mode", p.mode || "light");
               document.documentElement.setAttribute("data-theme", p.id);
             }
           } else {
-            document.documentElement.setAttribute("data-mode", "dark");
+            document.documentElement.setAttribute("data-mode", "light");
           }
         } catch(e) {
-          document.documentElement.setAttribute("data-mode", "dark");
+          document.documentElement.setAttribute("data-mode", "light");
         }
       })();
     `;
