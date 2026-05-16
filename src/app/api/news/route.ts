@@ -20,6 +20,9 @@ const RSS_SOURCES: Record<string, string[]> = {
   "ai-tips": [
     "https://simonwillison.net/atom/everything/",
   ],
+  "ai-education": [
+    "https://www.freecodecamp.org/news/rss/",
+  ],
   "open-source": [],
   "ai-design": [],
   "industry": [],

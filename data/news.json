@@ -328,5 +328,65 @@
     "source": "OpenAI",
     "category": "ai-tips",
     "date": "2026-05-11"
+  },
+  {
+    "id": "edu-1",
+    "title": "Google 发布 AI 学习路径：从 Prompt 工程到 Agent 开发",
+    "link": "https://cloud.google.com/learn/training",
+    "content": "Google 推出全新 AI 学习路径，涵盖 Prompt 工程基础、Gemini API 实战、AI Agent 开发等课程，适合不同阶段的开发者系统学习。",
+    "pubDate": "2026-05-16T10:00:00.000Z",
+    "source": "Google Cloud",
+    "category": "ai-education",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "edu-2",
+    "title": "Fast.ai 发布 2026 版深度学习课程：从零到前沿模型",
+    "link": "https://www.fast.ai/",
+    "content": "Fast.ai 发布最新版深度学习实战课程，覆盖从基础神经网络到最新的大模型微调、RLHF 和模型部署，适合有 Python 基础的开发者。",
+    "pubDate": "2026-05-15T08:00:00.000Z",
+    "source": "Fast.ai",
+    "category": "ai-education",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "edu-3",
+    "title": "DeepLearning.AI 新课上线：多模态 AI 系统实战",
+    "link": "https://www.deeplearning.ai/courses/",
+    "content": "Andrew Ng 团队推出全新多模态 AI 课程，教授如何构建处理文本、图像和音频的 AI 系统，包含大量实战项目和最佳实践。",
+    "pubDate": "2026-05-14T09:00:00.000Z",
+    "source": "DeepLearning.AI",
+    "category": "ai-education",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "edu-4",
+    "title": "MIT 2026 春季《人工智能导论》开放课程上线",
+    "link": "https://ocw.mit.edu/",
+    "content": "MIT 开放课程平台发布 2026 春季《人工智能导论》完整版，包含视频讲座、课件和作业，涵盖搜索、规划、机器学习、自然语言处理等核心主题。",
+    "pubDate": "2026-05-13T08:00:00.000Z",
+    "source": "MIT OCW",
+    "category": "ai-education",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "edu-5",
+    "title": "微软 AI Skills Initiative：免费提供 AI 认证与学习资源",
+    "link": "https://ai.microsoft.com/",
+    "content": "微软启动 AI Skills Initiative，面向全球开发者免费提供 AI 认证考试、在线课程和实操实验室，覆盖 Azure AI、Copilot 开发和 AI 安全。",
+    "pubDate": "2026-05-12T10:00:00.000Z",
+    "source": "Microsoft",
+    "category": "ai-education",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "edu-6",
+    "title": "Stanford CS229 机器学习课程 2026 版笔记与资源汇总",
+    "link": "https://cs229.stanford.edu/",
+    "content": "Stanford 经典 CS229 机器学习课程 2026 年版全部资源开放，包含完整讲义、作业和项目，涵盖监督学习、无监督学习、强化学习和深度学习基础。",
+    "pubDate": "2026-05-11T09:00:00.000Z",
+    "source": "Stanford",
+    "category": "ai-education",
+    "date": "2026-05-11"
   }
 ]

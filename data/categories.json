@@ -57,6 +57,17 @@
     ]
   },
   {
+    "id": "ai-education",
+    "name": "AI 学习",
+    "nameEn": "AI Learning",
+    "description": "AI 课程、学习资源、教程、认证、AI 辅助教育",
+    "icon": "📚",
+    "color": "from-green-400 to-emerald-600",
+    "sources": [
+      "https://www.freecodecamp.org/news/rss/"
+    ]
+  },
+  {
     "id": "open-source",
     "name": "开源项目",
     "nameEn": "Open Source",
