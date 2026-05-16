@@ -53,8 +53,8 @@ export default function LiveNewsFeed({ initialNews, categories }: LiveNewsFeedPr
     return (
       <div className="glass rounded-xl p-16 text-center">
         <div className="text-4xl mb-4">📡</div>
-        <h3 className="text-lg font-medium text-white/60 mb-2">等待数据更新</h3>
-        <p className="text-sm text-white/30 max-w-md mx-auto leading-relaxed">
+        <h3 className="text-lg font-medium text-[var(--text-secondary)] mb-2">等待数据更新</h3>
+        <p className="text-sm text-[var(--text-dim)] max-w-md mx-auto leading-relaxed">
           每日自动抓取各来源最新资讯，稍后刷新页面即可查看。
         </p>
       </div>
@@ -65,18 +65,18 @@ export default function LiveNewsFeed({ initialNews, categories }: LiveNewsFeedPr
     <div>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
-          <h2 className="text-xl font-semibold text-white/80">最新资讯</h2>
+          <h2 className="text-xl font-semibold text-[var(--text-primary)]">最新资讯</h2>
           {loading && (
             <span className="inline-block w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
           )}
         </div>
         <div className="flex items-center gap-2">
           {lastUpdate && (
-            <span className="text-[10px] text-white/30">
+            <span className="text-[10px] text-[var(--text-dim)]">
               更新于 {lastUpdate}
             </span>
           )}
-          <span className="text-xs text-white/30">
+          <span className="text-xs text-[var(--text-dim)]">
             {news.length > 0 ? "最近 7 天" : ""}
           </span>
         </div>
@@ -111,17 +111,17 @@ function NewsCard({ item, index, categories }: { item: NewsItem; index: number; 
             {cat.icon} {cat.name}
           </span>
         )}
-        <span className="text-[10px] text-white/30 ml-auto">{date}</span>
+        <span className="text-[10px] text-[var(--text-dim)] ml-auto">{date}</span>
       </div>
-      <h3 className="font-medium text-white/85 leading-snug line-clamp-2">
+      <h3 className="font-medium text-[var(--text-primary)] leading-snug line-clamp-2">
         {item.title}
       </h3>
       {item.content && (
-        <p className="mt-2 text-xs text-white/40 leading-relaxed line-clamp-2">
+        <p className="mt-2 text-xs text-[var(--text-tertiary)] leading-relaxed line-clamp-2">
           {item.content}
         </p>
       )}
-      <div className="mt-3 flex items-center gap-2 text-[10px] text-white/30">
+      <div className="mt-3 flex items-center gap-2 text-[10px] text-[var(--text-dim)]">
         <span className="truncate">{item.source}</span>
         <span className="text-blue-400/50 ml-auto">阅读 →</span>
       </div>

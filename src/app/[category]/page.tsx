@@ -28,7 +28,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
     <div className="space-y-8">
       <Link
         href="/"
-        className="text-sm text-white/30 hover:text-white/60 transition-colors flex items-center gap-1"
+        className="text-sm text-[var(--text-dim)] hover:text-[var(--text-secondary)] transition-colors flex items-center gap-1"
       >
         ← 返回
       </Link>
@@ -38,13 +38,13 @@ export default function CategoryPage({ params }: { params: { category: string } 
           {cat.icon}
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-white/90">{cat.name}</h1>
-          <p className="text-sm text-white/40 mt-1">{cat.description}</p>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">{cat.name}</h1>
+          <p className="text-sm text-[var(--text-tertiary)] mt-1">{cat.description}</p>
         </div>
       </div>
 
       {/* Sub-navigation */}
-      <div className="flex flex-wrap gap-2 pb-6 border-b border-white/5">
+      <div className="flex flex-wrap gap-2 pb-6 border-b" style={{ borderColor: "var(--border-subtle)" }}>
         {categories.map((c: Category) => (
           <Link
             key={c.id}
@@ -52,7 +52,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
             className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
               c.id === cat.id
                 ? `bg-gradient-to-r ${c.color} text-white`
-                : "bg-white/5 text-white/40 hover:bg-white/10 hover:text-white/70"
+                : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] bg-[var(--badge-bg)] hover:bg-[var(--hover-bg)]"
             }`}
           >
             {c.icon} {c.name}

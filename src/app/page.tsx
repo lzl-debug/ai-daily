@@ -14,9 +14,9 @@ export default function HomePage() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
           <span className="gradient-text">AI 资讯</span>
           <br />
-          <span className="text-white/90">每日速览</span>
+          <span className="text-[var(--text-primary)]">每日速览</span>
         </h1>
-        <p className="mt-6 text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg text-[var(--text-tertiary)] max-w-2xl mx-auto leading-relaxed">
           每日聚合 AI 领域前沿资讯 — 从前端工具到后端框架，从学术研究到开源项目
         </p>
       </section>
@@ -24,8 +24,8 @@ export default function HomePage() {
       {/* Category Grid */}
       <section>
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-xl font-semibold text-white/80">分类浏览</h2>
-          <span className="text-xs text-white/30">{categories.length} 个分类</span>
+          <h2 className="text-xl font-semibold text-[var(--text-primary)]">分类浏览</h2>
+          <span className="text-xs text-[var(--text-dim)]">{categories.length} 个分类</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {categories.map((cat: Category, i: number) => (
@@ -38,13 +38,13 @@ export default function HomePage() {
               <div className={`inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${cat.color} text-lg`}>
                 {cat.icon}
               </div>
-              <h3 className="mt-4 font-semibold text-white/90 group-hover:text-white transition-colors">
+              <h3 className="mt-4 font-semibold text-[var(--text-primary)] group-hover:text-[var(--text-primary)] transition-colors">
                 {cat.name}
               </h3>
-              <p className="mt-1.5 text-xs text-white/40">
+              <p className="mt-1.5 text-xs text-[var(--text-tertiary)]">
                 {cat.nameEn}
               </p>
-              <p className="mt-2 text-sm text-white/50 leading-relaxed line-clamp-2">
+              <p className="mt-2 text-sm text-[var(--text-tertiary)] leading-relaxed line-clamp-2">
                 {cat.description}
               </p>
               <div className="mt-4 flex items-center gap-1 text-xs text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">

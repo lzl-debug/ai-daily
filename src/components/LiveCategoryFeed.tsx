@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { NewsItem, Category } from "@/lib/data";
+import type { NewsItem } from "@/lib/data";
 
 interface LiveCategoryFeedProps {
   initialNews: NewsItem[];
@@ -42,8 +42,8 @@ export default function LiveCategoryFeed({ initialNews, categoryId }: LiveCatego
     return (
       <div className="glass rounded-xl p-16 text-center">
         <div className="text-4xl mb-4">📭</div>
-        <h3 className="text-lg font-medium text-white/60 mb-2">暂无资讯</h3>
-        <p className="text-sm text-white/30 max-w-md mx-auto leading-relaxed">
+        <h3 className="text-lg font-medium text-[var(--text-secondary)] mb-2">暂无资讯</h3>
+        <p className="text-sm text-[var(--text-dim)] max-w-md mx-auto leading-relaxed">
           该分类下还没有内容，等待数据自动更新...
         </p>
       </div>
@@ -56,7 +56,7 @@ export default function LiveCategoryFeed({ initialNews, categoryId }: LiveCatego
         {loading && (
           <span className="inline-block w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
         )}
-        <span className="text-xs text-white/30">
+        <span className="text-xs text-[var(--text-dim)]">
           {news.length} 条资讯
         </span>
       </div>
@@ -71,21 +71,21 @@ export default function LiveCategoryFeed({ initialNews, categoryId }: LiveCatego
             style={{ animationDelay: `${i * 60}ms` }}
           >
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-[10px] text-white/30">
+              <span className="text-[10px] text-[var(--text-dim)]">
                 {new Date(item.pubDate).toLocaleDateString("zh-CN", {
                   month: "short",
                   day: "numeric",
                 })}
               </span>
-              <span className="text-[10px] text-white/20 truncate ml-auto">
+              <span className="text-[10px] text-[var(--text-faint)] truncate ml-auto">
                 {item.source}
               </span>
             </div>
-            <h3 className="font-medium text-white/85 leading-snug line-clamp-2">
+            <h3 className="font-medium text-[var(--text-primary)] leading-snug line-clamp-2">
               {item.title}
             </h3>
             {item.content && (
-              <p className="mt-2 text-xs text-white/40 leading-relaxed line-clamp-3">
+              <p className="mt-2 text-xs text-[var(--text-tertiary)] leading-relaxed line-clamp-3">
                 {item.content}
               </p>
             )}

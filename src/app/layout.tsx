@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className="dark" suppressHydrationWarning>
-      <body className="min-h-screen bg-[#0a0a0f] antialiased">
+    <html lang="zh-CN" suppressHydrationWarning>
+      <body className="min-h-screen antialiased" style={{ backgroundColor: "var(--bg-primary)" }}>
         <ThemeProvider>
           <Navbar />
           <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
@@ -32,7 +32,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-[#0a0a0f]/80 backdrop-blur-xl">
+    <header
+      className="sticky top-0 z-50 border-b backdrop-blur-xl"
+      style={{
+        borderColor: "var(--border-subtle)",
+        backgroundColor: "var(--header-bg)",
+      }}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="logo-bg flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white transition-colors duration-500">
@@ -40,12 +46,18 @@ function Navbar() {
           </div>
           <span className="text-lg font-semibold tracking-tight">
             <span className="gradient-text">AI</span>
-            <span className="text-white/70"> Daily</span>
+            <span style={{ color: "var(--text-secondary)" }}> Daily</span>
           </span>
         </Link>
         <div className="flex items-center gap-1">
           <ThemeSwitcher />
-          <span className="hidden sm:flex items-center gap-1 text-xs text-white/30 bg-white/5 px-3 py-1.5 rounded-full">
+          <span
+            className="hidden sm:flex items-center gap-1 text-xs rounded-full px-3 py-1.5"
+            style={{
+              color: "var(--text-dim)",
+              backgroundColor: "var(--badge-bg)",
+            }}
+          >
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-glow" />
             每日更新
           </span>
@@ -57,13 +69,13 @@ function Navbar() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 mt-24">
+    <footer className="border-t mt-24" style={{ borderColor: "var(--border-subtle)" }}>
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-sm text-white/30">
+          <p style={{ color: "var(--text-dim)" }} className="text-sm">
             AI Daily — 每日 AI 资讯聚合平台
           </p>
-          <p className="text-xs text-white/20">
+          <p style={{ color: "var(--text-faint)" }} className="text-xs">
             数据来源：各 AI 公司官方博客、arXiv、Product Hunt、GitHub Trending 等
           </p>
         </div>
