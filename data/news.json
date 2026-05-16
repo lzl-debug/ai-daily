@@ -110,6 +110,16 @@
     "date": "2026-05-12"
   },
   {
+    "id": "research-4",
+    "title": "斯坦福发布 Foundation Model Transparency Index 2026",
+    "link": "https://hai.stanford.edu/",
+    "content": "斯坦福 HAI 发布 2026 年度基础模型透明度指数，对全球主流大模型进行透明度评估，开源模型在数据来源和训练方法上得分显著提升。",
+    "pubDate": "2026-05-10T08:00:00.000Z",
+    "source": "Stanford HAI",
+    "category": "research",
+    "date": "2026-05-10"
+  },
+  {
     "id": "tools-1",
     "title": "Product Hunt 热门：Windsurf 发布下一代 AI IDE",
     "link": "https://www.producthunt.com/",
@@ -128,6 +138,26 @@
     "source": "Replit",
     "category": "tools",
     "date": "2026-05-13"
+  },
+  {
+    "id": "tools-3",
+    "title": "Bolt.new 推出团队协作功能，支持多人实时编辑 AI 生成项目",
+    "link": "https://bolt.new/blog",
+    "content": "AI 驱动的全栈 Web 应用生成平台 Bolt.new 发布团队协作功能，允许多名开发者同时编辑 AI 生成的项目代码，支持实时同步。",
+    "pubDate": "2026-05-11T10:00:00.000Z",
+    "source": "Bolt.new",
+    "category": "tools",
+    "date": "2026-05-11"
+  },
+  {
+    "id": "tools-4",
+    "title": "Lovable 发布 AI UI 生成器：从截图到代码只需数秒",
+    "link": "https://lovable.dev/blog",
+    "content": "Lovable（前 GPT Engineer）推出全新 AI UI 生成器，用户上传设计截图即可让 AI 自动生成对应的前端代码，支持 React 和 Vue。",
+    "pubDate": "2026-05-10T14:00:00.000Z",
+    "source": "Lovable",
+    "category": "tools",
+    "date": "2026-05-10"
   },
   {
     "id": "opensource-1",
@@ -150,6 +180,26 @@
     "date": "2026-05-12"
   },
   {
+    "id": "opensource-3",
+    "title": "Ollama 发布 v0.50：支持多 GPU 分布式推理",
+    "link": "https://ollama.ai/blog",
+    "content": "本地 LLM 运行工具 Ollama 发布 v0.50 版本，新增多 GPU 分布式推理支持，可跨多张显卡拆分模型加载，大幅降低显存门槛。",
+    "pubDate": "2026-05-11T09:00:00.000Z",
+    "source": "Ollama",
+    "category": "open-source",
+    "date": "2026-05-11"
+  },
+  {
+    "id": "opensource-4",
+    "title": "AutoGPT 发布 v2.0：插件生态全面升级",
+    "link": "https://github.com/Significant-Gravitas/AutoGPT",
+    "content": "AutoGPT v2.0 正式发布，全面重构插件系统，新增 50+ 官方插件，支持网页浏览、代码执行、文件操作等能力的自由组合。",
+    "pubDate": "2026-05-09T16:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source",
+    "date": "2026-05-09"
+  },
+  {
     "id": "design-1",
     "title": "Midjourney 发布 V7 模型：实时协作编辑功能上线",
     "link": "https://www.midjourney.com/blog",
@@ -158,6 +208,26 @@
     "source": "Midjourney",
     "category": "ai-design",
     "date": "2026-05-14"
+  },
+  {
+    "id": "design-2",
+    "title": "Canva 推出 AI 视频生成功能：文本直接生成短视频",
+    "link": "https://www.canva.com/newsroom/",
+    "content": "Canva 发布 AI 视频生成工具，用户只需输入文本描述即可自动生成高质量短视频，支持风格模板、自动字幕和背景音乐。",
+    "pubDate": "2026-05-12T09:00:00.000Z",
+    "source": "Canva",
+    "category": "ai-design",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "design-3",
+    "title": "Figma AI 新增设计系统自动生成功能",
+    "link": "https://www.figma.com/blog/",
+    "content": "Figma AI 推出设计系统自动生成功能，可分析现有设计稿并自动提取颜色、字体、间距等设计令牌，生成完整的设计系统规范。",
+    "pubDate": "2026-05-10T11:00:00.000Z",
+    "source": "Figma",
+    "category": "ai-design",
+    "date": "2026-05-10"
   },
   {
     "id": "industry-1",
@@ -178,5 +248,25 @@
     "source": "TechCrunch",
     "category": "industry",
     "date": "2026-05-11"
+  },
+  {
+    "id": "industry-3",
+    "title": "NVIDIA 市值突破 4 万亿美元，AI 芯片需求持续暴增",
+    "link": "https://nvidianews.nvidia.com/",
+    "content": "NVIDIA 市值突破 4 万亿美元大关，受 AI 训练和推理芯片需求持续暴增推动，Blackwell 架构 GPU 订单已排至明年。",
+    "pubDate": "2026-05-10T09:00:00.000Z",
+    "source": "NVIDIA News",
+    "category": "industry",
+    "date": "2026-05-10"
+  },
+  {
+    "id": "industry-4",
+    "title": "中国发布《生成式 AI 服务管理办法》更新版",
+    "link": "https://www.cac.gov.cn/",
+    "content": "中国网信办发布《生成式人工智能服务管理办法》更新版，进一步明确 AI 生成内容标识、数据安全和模型备案要求。",
+    "pubDate": "2026-05-08T06:00:00.000Z",
+    "source": "CAC",
+    "category": "industry",
+    "date": "2026-05-08"
   }
 ]
