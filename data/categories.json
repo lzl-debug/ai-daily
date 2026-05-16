@@ -68,6 +68,15 @@
     ]
   },
   {
+    "id": "ai-influencers",
+    "name": "AI 大V",
+    "nameEn": "AI Influencers",
+    "description": "AI 领域意见领袖、知名学者的观点分享与前沿洞见",
+    "icon": "🎙️",
+    "color": "from-fuchsia-500 to-purple-600",
+    "sources": []
+  },
+  {
     "id": "open-source",
     "name": "开源项目",
     "nameEn": "Open Source",

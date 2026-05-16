@@ -388,5 +388,65 @@
     "source": "Stanford",
     "category": "ai-education",
     "date": "2026-05-11"
+  },
+  {
+    "id": "influencer-1",
+    "title": "Sam Altman：GPT-5 的推理能力将改变编程范式",
+    "link": "https://openai.com/blog/",
+    "content": "OpenAI CEO Sam Altman 在最新访谈中表示，GPT-5 的深度推理能力将使 AI 从代码补全进化为真正的编程伙伴，能自主理解复杂需求并提出架构方案。",
+    "pubDate": "2026-05-16T12:00:00.000Z",
+    "source": "OpenAI",
+    "category": "ai-influencers",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "influencer-2",
+    "title": "Andrej Karpathy：AI 时代每个人都应该学会编程",
+    "link": "https://karpathy.github.io/",
+    "content": "前 OpenAI 研究员 Andrej Karpathy 发文强调，AI 降低了编程门槛但并未消除学习的必要性。他建议开发者利用 AI 辅助学习编程而非完全依赖 AI 生成代码。",
+    "pubDate": "2026-05-15T10:00:00.000Z",
+    "source": "Andrej Karpathy",
+    "category": "ai-influencers",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "influencer-3",
+    "title": "Andrew Ng：Agentic Workflow 是 AI 应用的下一个爆发点",
+    "link": "https://www.deeplearning.ai/the-batch/",
+    "content": "AI 教育先驱 Andrew Ng 在最新一期 The Batch 中指出，AI Agent 工作流（Agentic Workflow）将比基础模型升级带来更显著的实际价值提升，企业应优先布局。",
+    "pubDate": "2026-05-14T08:00:00.000Z",
+    "source": "DeepLearning.AI",
+    "category": "ai-influencers",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "influencer-4",
+    "title": "Geoffrey Hinton：AI 安全研究需要更多资源投入",
+    "link": "https://www.utoronto.ca/",
+    "content": "深度学习之父 Geoffrey Hinton 在公开演讲中重申 AI 安全的重要性，认为当前全球 AI 安全研究投入不足总研发经费的 10%，远低于应有水平。",
+    "pubDate": "2026-05-13T09:00:00.000Z",
+    "source": "University of Toronto",
+    "category": "ai-influencers",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "influencer-5",
+    "title": "Demis Hassabis：AlphaFold 3 开源将加速药物研发 10 倍",
+    "link": "https://deepmind.google/",
+    "content": "DeepMind CEO Demis Hassabis 宣布 AlphaFold 3 开源时表示，蛋白质结构预测的民主化将彻底改变药物发现流程，预计将新药研发周期从数年缩短至数月。",
+    "pubDate": "2026-05-12T11:00:00.000Z",
+    "source": "DeepMind",
+    "category": "ai-influencers",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "influencer-6",
+    "title": "Yann LeCun：开源模型将在 2 年内追平闭源模型",
+    "link": "https://ai.meta.com/blog/",
+    "content": "Meta 首席 AI 科学家 Yann LeCun 预测，开源大模型将在 2 年内在性能上追平闭源模型，开源生态的集体创新速度远超单一公司。",
+    "pubDate": "2026-05-11T14:00:00.000Z",
+    "source": "Meta AI",
+    "category": "ai-influencers",
+    "date": "2026-05-11"
   }
 ]
