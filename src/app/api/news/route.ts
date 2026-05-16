@@ -95,6 +95,7 @@ async function fetchRSS(url: string, signal: AbortSignal): Promise<any[]> {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const category = searchParams.get("category");
+  const searchQuery = searchParams.get("q");
 
   // Load seed data from news.json
   const newsPath = path.join(process.cwd(), "data", "news.json");
@@ -147,6 +148,17 @@ export async function GET(request: Request) {
   // If no results for a category, return all seed data for that category as fallback
   if (result.length === 0 && category) {
     result = seedData.filter((item) => item.category === category);
+  }
+
+  // Search filter
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    result = result.filter(
+      (item) =>
+        item.title?.toLowerCase().includes(q) ||
+        item.content?.toLowerCase().includes(q) ||
+        item.source?.toLowerCase().includes(q)
+    );
   }
 
   return NextResponse.json(result, {
