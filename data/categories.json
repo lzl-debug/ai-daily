@@ -77,6 +77,17 @@
     "sources": []
   },
   {
+    "id": "ai-video",
+    "name": "AI 视频",
+    "nameEn": "AI Video & Multimodal",
+    "description": "视频生成、音频合成、多模态模型、Sora、Runway、ElevenLabs 等",
+    "icon": "🎬",
+    "color": "from-red-500 to-rose-600",
+    "sources": [
+      "https://runwayml.com/feed.xml"
+    ]
+  },
+  {
     "id": "open-source",
     "name": "开源项目",
     "nameEn": "Open Source",

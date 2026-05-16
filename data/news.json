@@ -448,5 +448,65 @@
     "source": "Meta AI",
     "category": "ai-influencers",
     "date": "2026-05-11"
+  },
+  {
+    "id": "video-1",
+    "title": "OpenAI 发布 Sora 2.0：支持 4K 分辨率与实时编辑",
+    "link": "https://openai.com/sora",
+    "content": "OpenAI 发布 Sora 2.0，新增 4K 分辨率视频生成能力，支持实时交互式编辑和局部修改，用户可对生成视频中的物体进行拖拽调整。",
+    "pubDate": "2026-05-16T14:00:00.000Z",
+    "source": "OpenAI",
+    "category": "ai-video",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "video-2",
+    "title": "Runway Gen-4 发布：AI 视频生成进入电影级画质时代",
+    "link": "https://runwayml.com/",
+    "content": "Runway 发布 Gen-4 模型，实现电影级画质的视频生成，支持一致的镜头语言、角色连贯性和复杂场景调度，导演可直接用文字描述完成短片制作。",
+    "pubDate": "2026-05-15T11:00:00.000Z",
+    "source": "Runway",
+    "category": "ai-video",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "video-3",
+    "title": "ElevenLabs 推出语音转视频功能：AI 数字人时代来临",
+    "link": "https://elevenlabs.io/",
+    "content": "ElevenLabs 发布语音转视频功能，用户只需提供音频即可自动生成唇形同步的数字人视频，支持多语言口型适配和表情动画。",
+    "pubDate": "2026-05-14T10:00:00.000Z",
+    "source": "ElevenLabs",
+    "category": "ai-video",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "video-4",
+    "title": "Google Veo 2 全面开放：支持视频到视频编辑与风格迁移",
+    "link": "https://deepmind.google/technologies/veo/",
+    "content": "Google 的 Veo 2 视频生成模型向全体用户开放，新增视频到视频编辑功能，可将上传的视频一键转换为不同风格（动画、油画、赛博朋克等）。",
+    "pubDate": "2026-05-13T10:00:00.000Z",
+    "source": "Google DeepMind",
+    "category": "ai-video",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "video-5",
+    "title": "Stability AI 发布 Stable Video 4D：从单张图片生成 3D 视频",
+    "link": "https://stability.ai/",
+    "content": "Stability AI 推出 Stable Video 4D 模型，可从单张图片生成带视角旋转的 3D 视频，为游戏、VR 和电商展示带来全新创作方式。",
+    "pubDate": "2026-05-12T10:00:00.000Z",
+    "source": "Stability AI",
+    "category": "ai-video",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "video-6",
+    "title": "Pika 2.0 发布：AI 视频编辑支持精准区域修改",
+    "link": "https://pika.art/",
+    "content": "Pika 2.0 大幅升级视频编辑能力，用户可选中视频中的任意区域进行精准修改（换装、加物、改背景），不影响画面其他部分的一致性。",
+    "pubDate": "2026-05-11T08:00:00.000Z",
+    "source": "Pika",
+    "category": "ai-video",
+    "date": "2026-05-11"
   }
 ]
