@@ -2,7 +2,6 @@ name: Daily Content Update
 
 on:
   schedule:
-    # Run at 00:00, 08:00, 16:00 UTC daily (08:00, 16:00, 00:00 Beijing time)
     - cron: "0 0,8,16 * * *"
   workflow_dispatch:
 
@@ -11,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -37,3 +35,20 @@ jobs:
             git commit -m "chore: update AI news data [skip ci]"
             git push
           fi
+
+      - name: Trigger Vercel Deployment
+        if: always()
+        run: |
+          curl -s -X POST "https://api.vercel.com/v13/deployments" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "name": "ai-daily",
+              "projectId": "prj_t4B3maru04ZZzyii00jFf6DYx9dN",
+              "target": "production",
+              "gitSource": {
+                "type": "github",
+                "ref": "main",
+                "repoId": 1240321861
+              }
+            }'
