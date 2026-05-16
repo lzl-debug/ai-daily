@@ -728,5 +728,45 @@
     "source": "METI Japan",
     "category": "industry",
     "date": "2026-05-03"
+  },
+  {
+    "id": "frontend-7",
+    "title": "OpenAI Codex CLI 入门教程：终端里的 AI 编程助手",
+    "link": "https://openai.com/blog/",
+    "content": "OpenAI 发布 Codex CLI 工具，在终端中为开发者提供 AI 编程辅助。本教程从安装配置开始，逐步讲解代码生成、调试和重构等核心功能的使用方法。",
+    "pubDate": "2026-05-02T10:00:00.000Z",
+    "source": "OpenAI",
+    "category": "frontend-ai",
+    "date": "2026-05-02"
+  },
+  {
+    "id": "frontend-8",
+    "title": "Codex 进化史：从 GPT-3 代码补全到自主编程 Agent",
+    "link": "https://openai.com/blog/",
+    "content": "深度回顾 OpenAI Codex 从最初基于 GPT-3 的代码补全工具，到如今支持多文件编辑和 Agent 模式的完整进化历程，以及背后的技术架构演进。",
+    "pubDate": "2026-04-30T10:00:00.000Z",
+    "source": "OpenAI",
+    "category": "frontend-ai",
+    "date": "2026-04-30"
+  },
+  {
+    "id": "tips-7",
+    "title": "AI 编程工具进阶教程：从 Copilot 到 Agent 模式的完整指南",
+    "link": "https://github.blog/",
+    "content": "一份全面的 AI 编程工具学习教程，涵盖 GitHub Copilot、Claude Code、Cursor 和 Codex 等主流工具的使用技巧，从基础配置到高级工作流编排。",
+    "pubDate": "2026-05-01T10:00:00.000Z",
+    "source": "GitHub Blog",
+    "category": "ai-tips",
+    "date": "2026-05-01"
+  },
+  {
+    "id": "tools-7",
+    "title": "Trae AI IDE 上手教程：字节跳动出品的新一代编程工具",
+    "link": "https://www.trae.ai/",
+    "content": "字节跳动发布 Trae AI IDE 的详细使用教程，从项目创建、AI 对话编程、多文件重构到一键部署，帮助开发者快速上手这款新一代 AI 原生 IDE。",
+    "pubDate": "2026-04-28T10:00:00.000Z",
+    "source": "Trae",
+    "category": "tools",
+    "date": "2026-04-28"
   }
 ]

@@ -152,27 +152,48 @@ export async function GET(request: Request) {
 
   // Search filter with token-level matching and relevance ranking
   if (searchQuery) {
-    const tokens = searchQuery.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    // Split query into tokens: separate CJK characters from alphanumeric sequences
+    // This ensures "codex教程" is tokenized as ["codex", "教", "程"] instead of one token
+    const tokens = searchQuery
+      .toLowerCase()
+      .trim()
+      .split(/\s+/)
+      .flatMap((s) => {
+        const parts: string[] = [];
+        let buf = "";
+        for (const ch of s) {
+          if (/[a-z0-9.@#+]/.test(ch)) {
+            buf += ch;
+          } else {
+            if (buf) { parts.push(buf); buf = ""; }
+            if (/[一-鿿]/.test(ch)) parts.push(ch);
+          }
+        }
+        if (buf) parts.push(buf);
+        return parts;
+      })
+      .filter((t) => t.length > 0);
 
-    result = result.filter((item) => {
-      if (tokens.length === 0) return false;
-      const text = [item.title, item.content, item.source]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return tokens.some((token) => text.includes(token));
-    });
+    if (tokens.length > 0) {
+      result = result.filter((item) => {
+        const text = [item.title, item.content, item.source]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return tokens.some((token) => text.includes(token));
+      });
 
-    // Sort by relevance: more token matches + title matches ranked higher
-    result.sort((a: any, b: any) => {
-      const aText = [a.title, a.content, a.source].filter(Boolean).join(" ").toLowerCase();
-      const bText = [b.title, b.content, b.source].filter(Boolean).join(" ").toLowerCase();
-      const aScore = tokens.filter((t) => aText.includes(t)).length;
-      const bScore = tokens.filter((t) => bText.includes(t)).length;
-      const aTitleBonus = tokens.filter((t) => (a.title || "").toLowerCase().includes(t)).length * 3;
-      const bTitleBonus = tokens.filter((t) => (b.title || "").toLowerCase().includes(t)).length * 3;
-      return bScore + bTitleBonus - (aScore + aTitleBonus);
-    });
+      // Sort by relevance: more token matches + title matches ranked higher
+      result.sort((a: any, b: any) => {
+        const aText = [a.title, a.content, a.source].filter(Boolean).join(" ").toLowerCase();
+        const bText = [b.title, b.content, b.source].filter(Boolean).join(" ").toLowerCase();
+        const aScore = tokens.filter((t) => aText.includes(t)).length;
+        const bScore = tokens.filter((t) => bText.includes(t)).length;
+        const aTitleBonus = tokens.filter((t) => (a.title || "").toLowerCase().includes(t)).length * 3;
+        const bTitleBonus = tokens.filter((t) => (b.title || "").toLowerCase().includes(t)).length * 3;
+        return bScore + bTitleBonus - (aScore + aTitleBonus);
+      });
+    }
   }
 
   return NextResponse.json(result, {
