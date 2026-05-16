@@ -268,5 +268,65 @@
     "source": "CAC",
     "category": "industry",
     "date": "2026-05-08"
+  },
+  {
+    "id": "tips-1",
+    "title": "AI 编程提示词工程：从新手到专家的进阶指南",
+    "link": "https://docs.anthropic.com/en/docs/prompt-engineering",
+    "content": "深入解析 AI 编程中的提示词工程技巧，从基础的角色设定到高级的 Chain-of-Thought 引导，帮助开发者充分发挥 AI 编码助手的潜力。",
+    "pubDate": "2026-05-16T09:00:00.000Z",
+    "source": "Anthropic",
+    "category": "ai-tips",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "tips-2",
+    "title": "Claude Code 高效工作流：5 个提升 10 倍开发效率的技巧",
+    "link": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "content": "掌握 Claude Code 的高级用法：批量文件重构、Agent 模式多步骤任务、MCP 工具集成、自定义快捷键和项目上下文管理，让 AI 真正成为你的编程搭档。",
+    "pubDate": "2026-05-15T10:00:00.000Z",
+    "source": "Anthropic",
+    "category": "ai-tips",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "tips-3",
+    "title": "ChatGPT 自定义指令高级玩法：打造你的专属 AI 助手",
+    "link": "https://openai.com/blog/",
+    "content": "利用 ChatGPT 的自定义指令功能，通过精心设计的系统提示词为 AI 设定角色、知识边界和输出风格，实现从通用助手到领域专家的转变。",
+    "pubDate": "2026-05-14T08:00:00.000Z",
+    "source": "OpenAI",
+    "category": "ai-tips",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "tips-4",
+    "title": "AI Agent 设计模式深度解析：ReAct、Plan-and-Execute 与 Multi-Agent",
+    "link": "https://blog.langchain.dev/",
+    "content": "深入对比主流 AI Agent 架构设计模式，分析 ReAct 循环、Plan-and-Execute 分层规划、Multi-Agent 协作等方案的适用场景和实现要点。",
+    "pubDate": "2026-05-13T14:00:00.000Z",
+    "source": "LangChain Blog",
+    "category": "ai-tips",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "tips-5",
+    "title": "RAG 应用落地的 10 个关键经验：从原型到生产",
+    "link": "https://blog.langchain.dev/",
+    "content": "总结检索增强生成（RAG）在生产环境中的实践经验，涵盖文档分块策略、嵌入模型选择、混合检索、重排序和缓存优化等关键技术决策。",
+    "pubDate": "2026-05-12T09:00:00.000Z",
+    "source": "LangChain Blog",
+    "category": "ai-tips",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "tips-6",
+    "title": "Prompt 优化指南：如何让大模型输出更精准、更可靠",
+    "link": "https://platform.openai.com/docs/guides/prompt-engineering",
+    "content": "系统化的 Prompt 优化方法论，包括少样本示例的选择策略、输出格式约束技巧、温度参数调优和对抗性测试，全面提升 AI 输出的质量和一致性。",
+    "pubDate": "2026-05-11T10:00:00.000Z",
+    "source": "OpenAI",
+    "category": "ai-tips",
+    "date": "2026-05-11"
   }
 ]

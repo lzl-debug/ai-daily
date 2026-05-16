@@ -46,6 +46,17 @@
     ]
   },
   {
+    "id": "ai-tips",
+    "name": "AI 技巧",
+    "nameEn": "AI Tips & Tricks",
+    "description": "AI 使用技巧、Prompt 工程、最佳实践、工作流优化、效率提升",
+    "icon": "💡",
+    "color": "from-yellow-400 to-amber-600",
+    "sources": [
+      "https://simonwillison.net/atom/everything/"
+    ]
+  },
+  {
     "id": "open-source",
     "name": "开源项目",
     "nameEn": "Open Source",

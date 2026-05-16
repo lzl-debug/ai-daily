@@ -17,6 +17,9 @@ const RSS_SOURCES: Record<string, string[]> = {
   "tools": [
     "https://www.producthunt.com/feed?category=artificial-intelligence",
   ],
+  "ai-tips": [
+    "https://simonwillison.net/atom/everything/",
+  ],
   "open-source": [],
   "ai-design": [],
   "industry": [],
