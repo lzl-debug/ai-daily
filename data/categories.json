@@ -1,0 +1,77 @@
+[
+  {
+    "id": "frontend-ai",
+    "name": "前端 AI",
+    "nameEn": "Frontend AI",
+    "description": "AI 编程助手、前端开发工具、Copilot 生态、Claude Code、Cursor 等",
+    "icon": "⚡",
+    "color": "from-cyan-500 to-blue-600",
+    "sources": [
+      "https://github.blog/changelog/feed/",
+      "https://openai.com/blog/rss.xml"
+    ]
+  },
+  {
+    "id": "backend-ai",
+    "name": "后端 AI",
+    "nameEn": "Backend AI",
+    "description": "LLM API、AI Agent 框架、RAG、MCP 协议、模型部署等",
+    "icon": "🧠",
+    "color": "from-violet-500 to-purple-700",
+    "sources": [
+      "https://www.anthropic.com/feed.xml",
+      "https://blog.google/technology/ai/rss/"
+    ]
+  },
+  {
+    "id": "research",
+    "name": "AI 研究",
+    "nameEn": "AI Research",
+    "description": "前沿论文、新模型发布、技术突破、学术进展",
+    "icon": "🔬",
+    "color": "from-emerald-500 to-teal-700",
+    "sources": [
+      "https://rss.arxiv.org/rss/cs.AI"
+    ]
+  },
+  {
+    "id": "tools",
+    "name": "AI 工具",
+    "nameEn": "AI Tools",
+    "description": "新产品发布、效率工具、平台更新、开发者工具",
+    "icon": "🛠️",
+    "color": "from-amber-500 to-orange-600",
+    "sources": [
+      "https://www.producthunt.com/feed?category=artificial-intelligence"
+    ]
+  },
+  {
+    "id": "open-source",
+    "name": "开源项目",
+    "nameEn": "Open Source",
+    "description": "GitHub 热门 AI 项目、开源框架、社区贡献",
+    "icon": "📦",
+    "color": "from-rose-500 to-pink-600",
+    "sources": [
+      "https://github.com/trending.rss"
+    ]
+  },
+  {
+    "id": "ai-design",
+    "name": "AI 设计",
+    "nameEn": "AI Design & Creative",
+    "description": "AI 设计工具、创意生成、多媒体 AI、设计系统",
+    "icon": "🎨",
+    "color": "from-pink-500 to-red-600",
+    "sources": []
+  },
+  {
+    "id": "industry",
+    "name": "行业动态",
+    "nameEn": "Industry News",
+    "description": "AI 公司动态、投融资、政策法规、产业趋势",
+    "icon": "📰",
+    "color": "from-sky-500 to-indigo-600",
+    "sources": []
+  }
+]

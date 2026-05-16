@@ -1,0 +1,182 @@
+[
+  {
+    "id": "frontend-1",
+    "title": "Claude Code 新增 MCP 协议支持，可与任意工具集成",
+    "link": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "content": "Claude Code 更新支持 Model Context Protocol (MCP)，允许开发者将 Claude Code 与任何支持 MCP 的工具集成，扩展了 AI 编码助手的生态边界。",
+    "pubDate": "2026-05-16T08:00:00.000Z",
+    "source": "Anthropic",
+    "category": "frontend-ai",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "frontend-2",
+    "title": "Cursor 发布 v0.45：全新 Agent 模式支持多文件编辑",
+    "link": "https://cursor.sh/changelog",
+    "content": "Cursor 编辑器发布 v0.45 版本，引入全新 Agent 模式，支持跨多文件进行 AI 辅助编辑和重构，大幅提升开发效率。",
+    "pubDate": "2026-05-15T10:30:00.000Z",
+    "source": "Cursor",
+    "category": "frontend-ai",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "frontend-3",
+    "title": "GitHub Copilot 推出 Agent Mode，支持自主完成任务",
+    "link": "https://github.blog/newsroom/",
+    "content": "GitHub Copilot 迎来重大更新，Agent Mode 允许 AI 自主规划并执行多步骤开发任务，包括代码搜索、编辑和测试。",
+    "pubDate": "2026-05-14T14:00:00.000Z",
+    "source": "GitHub Blog",
+    "category": "frontend-ai",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "frontend-4",
+    "title": "Vercel v0 新增 React Server Components 可视化生成",
+    "link": "https://v0.dev/changelog",
+    "content": "Vercel 的 AI 生成工具 v0 新增对 React Server Components 的支持，开发者可通过自然语言描述直接生成 RSC 组件。",
+    "pubDate": "2026-05-13T09:00:00.000Z",
+    "source": "Vercel",
+    "category": "frontend-ai",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "backend-1",
+    "title": "Anthropic 发布 Claude Opus 4.7：推理能力大幅提升",
+    "link": "https://www.anthropic.com/news",
+    "content": "Anthropic 发布 Claude Opus 4.7，在复杂推理、代码生成和多语言理解方面取得显著进步，多项基准测试刷新纪录。",
+    "pubDate": "2026-05-16T06:00:00.000Z",
+    "source": "Anthropic",
+    "category": "backend-ai",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "backend-2",
+    "title": "OpenAI 发布 GPT-5 API：支持 1M Token 上下文窗口",
+    "link": "https://openai.com/blog",
+    "content": "OpenAI 正式发布 GPT-5 API，支持高达 1M Token 的上下文窗口，并引入全新 Agent 编排能力，价格与 GPT-4 持平。",
+    "pubDate": "2026-05-15T16:00:00.000Z",
+    "source": "OpenAI",
+    "category": "backend-ai",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "backend-3",
+    "title": "LangChain 发布 v0.5：重构 Agent 运行时，支持 MCP",
+    "link": "https://blog.langchain.dev/",
+    "content": "LangChain v0.5 重大更新，重构了 Agent 运行时架构，新增对 Model Context Protocol (MCP) 的原生支持，大幅简化工具集成。",
+    "pubDate": "2026-05-14T11:00:00.000Z",
+    "source": "LangChain Blog",
+    "category": "backend-ai",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "backend-4",
+    "title": "Google 推出 Gemini 2.5 Pro：原生多模态 Agent",
+    "link": "https://blog.google/technology/ai/",
+    "content": "Google 发布 Gemini 2.5 Pro，首次实现原生多模态 Agent 能力，可同时理解文本、图像、音频和视频并自主执行任务。",
+    "pubDate": "2026-05-13T15:00:00.000Z",
+    "source": "Google AI Blog",
+    "category": "backend-ai",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "research-1",
+    "title": "arXiv 新论文：Chain-of-Thought 推理的缩放定律研究",
+    "link": "https://arxiv.org/abs/cs.AI",
+    "content": "最新研究揭示了 Chain-of-Thought 推理在不同模型规模下的缩放行为，发现小模型通过 CoT 获得的收益比例远大于大模型。",
+    "pubDate": "2026-05-16T04:00:00.000Z",
+    "source": "arXiv",
+    "category": "research",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "research-2",
+    "title": "DeepMind 发布 AlphaFold 3 开源版本",
+    "link": "https://deepmind.google/",
+    "content": "DeepMind 宣布开源 AlphaFold 3 核心代码，研究人员可自由使用和修改蛋白质结构预测模型，加速药物发现进程。",
+    "pubDate": "2026-05-14T12:00:00.000Z",
+    "source": "DeepMind",
+    "category": "research",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "research-3",
+    "title": "Meta 发布 Llama 4：170B 参数开源模型性能逼近 GPT-4",
+    "link": "https://ai.meta.com/blog/",
+    "content": "Meta 发布 Llama 4 系列模型，最大版本 170B 参数，在多项基准测试中性能逼近 GPT-4，继续践行开源路线。",
+    "pubDate": "2026-05-12T10:00:00.000Z",
+    "source": "Meta AI",
+    "category": "research",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "tools-1",
+    "title": "Product Hunt 热门：Windsurf 发布下一代 AI IDE",
+    "link": "https://www.producthunt.com/",
+    "content": "Windsurf 在 Product Hunt 上线新一代 AI 集成开发环境，以 Flow 模式实现代码编辑与 AI 辅助的无缝融合。",
+    "pubDate": "2026-05-16T07:00:00.000Z",
+    "source": "Product Hunt",
+    "category": "tools",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "tools-2",
+    "title": "Replit Agent 正式上线：自然语言描述即可生成完整应用",
+    "link": "https://replit.com/blog",
+    "content": "Replit 推出 Agent 功能，用户只需用自然语言描述需求，AI 即可自动生成完整的 Web 应用，包含前端、后端和数据库。",
+    "pubDate": "2026-05-13T08:00:00.000Z",
+    "source": "Replit",
+    "category": "tools",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "opensource-1",
+    "title": "GitHub 趋势榜：MCP Servers 仓库突破 50K Stars",
+    "link": "https://github.com/trending",
+    "content": "Model Context Protocol (MCP) 生态持续火爆，官方 Servers 仓库在 GitHub 突破 50K Stars，社区贡献的 MCP Server 超过 1000 个。",
+    "pubDate": "2026-05-15T20:00:00.000Z",
+    "source": "GitHub Trending",
+    "category": "open-source",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "opensource-2",
+    "title": "Dify 发布 v1.0：开源 LLM 应用开发平台里程碑",
+    "link": "https://github.com/langgenius/dify",
+    "content": "开源 LLM 应用开发平台 Dify 发布 v1.0 正式版，提供可视化工作流编排、RAG 管道和 Agent 能力，累计 GitHub Stars 超 60K。",
+    "pubDate": "2026-05-12T16:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "design-1",
+    "title": "Midjourney 发布 V7 模型：实时协作编辑功能上线",
+    "link": "https://www.midjourney.com/blog",
+    "content": "Midjourney V7 带来实时协作编辑功能，多名用户可同时在 AI 生成的图像上进行修改和迭代，重新定义创意工作流。",
+    "pubDate": "2026-05-14T09:00:00.000Z",
+    "source": "Midjourney",
+    "category": "ai-design",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "industry-1",
+    "title": "欧盟通过《人工智能责任指令》草案",
+    "link": "https://digital-strategy.ec.europa.eu/en",
+    "content": "欧盟委员会通过《人工智能责任指令》草案，明确 AI 系统的责任归属和赔偿机制，为全球 AI 立法提供重要参考。",
+    "pubDate": "2026-05-15T06:00:00.000Z",
+    "source": "EU Digital Strategy",
+    "category": "industry",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "industry-2",
+    "title": "AI 初创公司单季融资额创新高，Agents 赛道最受追捧",
+    "link": "https://techcrunch.com/",
+    "content": "2026 Q1 AI 领域融资报告出炉，全球 AI 初创公司单季融资额达 350 亿美元创新高，AI Agent 赛道成为资本最追捧的方向。",
+    "pubDate": "2026-05-11T14:00:00.000Z",
+    "source": "TechCrunch",
+    "category": "industry",
+    "date": "2026-05-11"
+  }
+]
