@@ -508,5 +508,65 @@
     "source": "Pika",
     "category": "ai-video",
     "date": "2026-05-11"
+  },
+  {
+    "id": "eco-1",
+    "title": "GitHub MCP Server 生态排行：Top 20 最受欢迎服务器",
+    "link": "https://github.com/modelcontextprotocol/servers",
+    "content": "Model Context Protocol 官方服务器仓库突破 60K Stars，社区贡献超过 1500 个 MCP Server。热门排行前三：Filesystem、Puppeteer、GitHub，覆盖开发全流程。",
+    "pubDate": "2026-05-16T16:00:00.000Z",
+    "source": "GitHub",
+    "category": "ai-ecosystem",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "eco-2",
+    "title": "Claude Code Skills 开发指南：如何创建高质量 AI Skill",
+    "link": "https://docs.anthropic.com/en/docs/claude-code/",
+    "content": "Anthropic 发布 Claude Code Skills 开发最佳实践，指导开发者创建结构清晰、行为稳定的 AI Skill 模板，包含技能描述、上下文管理和测试建议。",
+    "pubDate": "2026-05-15T15:00:00.000Z",
+    "source": "Anthropic",
+    "category": "ai-ecosystem",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "eco-3",
+    "title": "MCP 生态周报：本周最热 MCP Server 新增 47 个",
+    "link": "https://www.anthropic.com/news",
+    "content": "本周 MCP 生态新增 47 个社区贡献的服务器，最热领域为数据库连接（Supabase、Neon）、云服务（AWS、Vercel）和设计工具（Figma MCP Server）。",
+    "pubDate": "2026-05-14T12:00:00.000Z",
+    "source": "MCP Weekly",
+    "category": "ai-ecosystem",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "eco-4",
+    "title": "LangChain Hub 上线 Skills 市场：AI Agent 技能一键安装",
+    "link": "https://blog.langchain.dev/",
+    "content": "LangChain Hub 推出 Skills 市场，开发者可发布和安装 AI Agent 技能模块。首批上架 200+ 技能，涵盖数据分析、网页抓取、代码审查等场景。",
+    "pubDate": "2026-05-13T15:00:00.000Z",
+    "source": "LangChain Blog",
+    "category": "ai-ecosystem",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "eco-5",
+    "title": "Cursor Rules 生态爆发：开发者分享最强 .cursorrules 配置",
+    "link": "https://cursor.sh/docs/",
+    "content": "Cursor Rules 配置仓库在 GitHub 爆火，社区开发者分享针对不同技术栈（React、Python、Rust 等）的最优 AI 辅助规则，下载量超百万。",
+    "pubDate": "2026-05-12T10:00:00.000Z",
+    "source": "Cursor",
+    "category": "ai-ecosystem",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "eco-6",
+    "title": "MCP 企业落地实践：如何构建内部 MCP Server 矩阵",
+    "link": "https://blog.langchain.dev/",
+    "content": "多家企业分享 MCP 协议落地经验：通过构建内部 MCP Server 矩阵（知识库、数据库、API 网关），将 AI Agent 的可用工具从个位数提升至数百个。",
+    "pubDate": "2026-05-11T10:00:00.000Z",
+    "source": "LangChain Blog",
+    "category": "ai-ecosystem",
+    "date": "2026-05-11"
   }
 ]

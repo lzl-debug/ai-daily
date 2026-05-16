@@ -27,6 +27,7 @@ const RSS_SOURCES: Record<string, string[]> = {
   "ai-video": [
     "https://runwayml.com/feed.xml",
   ],
+  "ai-ecosystem": [],
   "open-source": [],
   "ai-design": [],
   "industry": [],

@@ -88,6 +88,17 @@
     ]
   },
   {
+    "id": "ai-ecosystem",
+    "name": "AI 生态",
+    "nameEn": "AI Ecosystem",
+    "description": "AI Skills 模板、MCP Server 排行、热门插件、生态扩展",
+    "icon": "🧩",
+    "color": "from-orange-400 to-red-500",
+    "sources": [
+      "https://github.com/trending.rss"
+    ]
+  },
+  {
     "id": "open-source",
     "name": "开源项目",
     "nameEn": "Open Source",
