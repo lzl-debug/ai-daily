@@ -8,8 +8,9 @@ export function generateStaticParams() {
   return getCategories().map((cat: Category) => ({ category: cat.id }));
 }
 
-export function generateMetadata({ params }: { params: { category: string } }) {
-  const cat = getCategories().find((c: Category) => c.id === params.category);
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params;
+  const cat = getCategories().find((c: Category) => c.id === category);
   if (!cat) return { title: "Not Found" };
   return {
     title: `${cat.name} - AI Daily`,
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: { params: { category: string } }) {
   };
 }
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const cat = getCategories().find((c: Category) => c.id === params.category);
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params;
+  const cat = getCategories().find((c: Category) => c.id === category);
   if (!cat) notFound();
 
   const news = getNewsByCategory(cat.id);
