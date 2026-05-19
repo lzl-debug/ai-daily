@@ -110,6 +110,15 @@
     ]
   },
   {
+    "id": "open-source-top",
+    "name": "开源 TOP",
+    "nameEn": "Open Source Top",
+    "description": "GitHub 趋势排行、Star 榜单、热门新仓库、开源项目对比",
+    "icon": "🏆",
+    "color": "from-amber-500 to-yellow-600",
+    "sources": []
+  },
+  {
     "id": "ai-design",
     "name": "AI 设计",
     "nameEn": "AI Design & Creative",

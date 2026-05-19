@@ -29,6 +29,7 @@ const RSS_SOURCES: Record<string, string[]> = {
   ],
   "ai-ecosystem": [],
   "open-source": [],
+  "open-source-top": [],
   "ai-design": [],
   "industry": [],
 };

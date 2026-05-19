@@ -768,5 +768,65 @@
     "source": "Trae",
     "category": "tools",
     "date": "2026-04-28"
+  },
+  {
+    "id": "top-1",
+    "title": "GitHub 2026 Q2 AI 项目 Star 榜：MCP 生态包揽前三",
+    "link": "https://github.com/trending",
+    "content": "GitHub 2026 年 Q2 AI 项目 Star 增长排行榜出炉，MCP 相关项目包揽前三名，其中官方 MCP Servers 仓库新增 Star 超 8 万，Dify 和 Ollama 紧随其后。",
+    "pubDate": "2026-05-16T10:00:00.000Z",
+    "source": "GitHub Trending",
+    "category": "open-source-top",
+    "date": "2026-05-16"
+  },
+  {
+    "id": "top-2",
+    "title": "本周 GitHub 趋势榜：AI Agent 框架霸榜，新增 3 个万星项目",
+    "link": "https://github.com/trending",
+    "content": "本周 GitHub Trending AI 榜单中，Agent 框架成为最大亮点，CrewAI、AutoGPT 和 LangGraph 集体上榜。新增 3 个万星项目，均为 AI 自主编程相关工具。",
+    "pubDate": "2026-05-15T10:00:00.000Z",
+    "source": "GitHub Trending",
+    "category": "open-source-top",
+    "date": "2026-05-15"
+  },
+  {
+    "id": "top-3",
+    "title": "全球 AI 开源项目总榜：Llama 系列突破 100 万 Star",
+    "link": "https://github.com/trending",
+    "content": "Meta 的 Llama 系列模型仓库累计 Star 数突破 100 万，成为 AI 领域首个百万 Star 项目。PyTorch、TensorFlow、Transformers 分列其后。",
+    "pubDate": "2026-05-14T10:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source-top",
+    "date": "2026-05-14"
+  },
+  {
+    "id": "top-4",
+    "title": "最新 AI 开源工具推荐：本周不可错过的 10 个新仓库",
+    "link": "https://github.com/trending",
+    "content": "本周精选 10 个新晋热门 AI 开源项目，包括 AI 数据库查询工具、本地 PDF 分析器、AI 视频字幕生成等实用工具，所有项目均在一周内获得超 2000 Star。",
+    "pubDate": "2026-05-13T10:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source-top",
+    "date": "2026-05-13"
+  },
+  {
+    "id": "top-5",
+    "title": "AI 编程工具开源排名：Cursor 开源替代品崛起",
+    "link": "https://github.com/trending",
+    "content": "开源 AI 编程助手领域竞争白热化，Continue、Tabby 和 Cody 等开源替代品在 Star 增速上首次超越商业化产品，开源社区对本地代码助手的偏好持续上升。",
+    "pubDate": "2026-05-12T10:00:00.000Z",
+    "source": "GitHub Trending",
+    "category": "open-source-top",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "top-6",
+    "title": "5 月 AI 数据库排行榜：开源方案 pgvector 和 Chroma 增速最快",
+    "link": "https://github.com/trending",
+    "content": "5 月 AI 数据库/向量数据库榜单出炉，开源的 pgvector 和 Chroma 在部署量上增速最快，超越 Pinecone 等商业方案。Milvus 和 Qdrant 紧随其后。",
+    "pubDate": "2026-05-11T10:00:00.000Z",
+    "source": "GitHub",
+    "category": "open-source-top",
+    "date": "2026-05-11"
   }
 ]
