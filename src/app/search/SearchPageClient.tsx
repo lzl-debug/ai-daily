@@ -19,6 +19,7 @@ interface SearchResult {
   pubDate: string;
   source: string;
   category: string;
+  score?: number;
 }
 
 function SearchContent() {
@@ -68,6 +69,20 @@ function SearchContent() {
     doSearch(trimmed);
   }
 
+  const sourceLabels: Record<string, string> = {
+    "Hacker News": "HN",
+    "GitHub": "GitHub",
+    "DEV.to": "DEV",
+  };
+
+  function getSourceColor(source: string) {
+    if (source.startsWith("Reddit")) return "#ff4500";
+    if (source === "Hacker News") return "#ff6600";
+    if (source === "DEV.to") return "#08090a";
+    if (source === "GitHub") return "#6e40c9";
+    return "var(--accent-text, #60a5fa)";
+  }
+
   return (
     <div className="max-w-3xl mx-auto py-8">
       <form onSubmit={handleSubmit} className="relative">
@@ -75,7 +90,7 @@ function SearchContent() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="搜索全网 AI 资讯..."
+          placeholder="搜索 AI 新闻、工具、教程、开源项目..."
           className="w-full rounded-xl border px-5 py-4 pr-14 text-base outline-none transition-all"
           style={{
             backgroundColor: "var(--bg-card)",
@@ -100,7 +115,7 @@ function SearchContent() {
         {loading && (
           <div className="flex items-center justify-center py-16">
             <span className="inline-block w-5 h-5 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
-            <span className="ml-3 text-sm" style={{ color: "var(--text-dim)" }}>搜索中...</span>
+            <span className="ml-3 text-sm" style={{ color: "var(--text-dim)" }}>正在搜索多个来源...</span>
           </div>
         )}
 
@@ -110,10 +125,18 @@ function SearchContent() {
               <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
                 找到 {results.length} 条结果
               </p>
-              {searchSource === "hn+local" && (
-                <span className="text-[10px] rounded-full px-2 py-0.5" style={{ color: "var(--text-dim)", backgroundColor: "var(--badge-bg)" }}>
-                  来源: Hacker News + AI Daily
-                </span>
+              {searchSource && (
+                <div className="flex items-center gap-1.5">
+                  {searchSource.split("+").map((s) => (
+                    <span
+                      key={s}
+                      className="text-[10px] rounded-full px-2 py-0.5"
+                      style={{ color: "var(--text-dim)", backgroundColor: "var(--badge-bg)" }}
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
             {results.length === 0 ? (
@@ -123,13 +146,13 @@ function SearchContent() {
                   没有找到相关结果
                 </p>
                 <p className="text-sm mt-2" style={{ color: "var(--text-dim)" }}>
-                  试试其他关键词
+                  试试其他关键词，如 "GPT-5"、"AI工具"、"LLM教程"
                 </p>
               </div>
             ) : (
               <div className="space-y-3">
                 {results.map((item) => (
-                  <ResultCard key={item.id} item={item} query={query} />
+                  <ResultCard key={item.id} item={item} query={query} getSourceColor={getSourceColor} />
                 ))}
               </div>
             )}
@@ -140,8 +163,20 @@ function SearchContent() {
           <div className="text-center py-16">
             <div className="text-5xl mb-4">🔎</div>
             <p style={{ color: "var(--text-dim)" }} className="text-sm">
-              搜索全网 AI 相关资讯
+              搜索 AI 新闻、教程、工具和开源项目
             </p>
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              {["GPT-5", "AI Agent", "Claude", "Stable Diffusion", "LLM教程"].map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => { setQuery(tag); doSearch(tag); router.push(`/search?q=${encodeURIComponent(tag)}`); }}
+                  className="text-xs rounded-full px-3 py-1.5 transition-all hover:scale-105"
+                  style={{ backgroundColor: "var(--badge-bg)", color: "var(--text-secondary)" }}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
@@ -149,7 +184,7 @@ function SearchContent() {
   );
 }
 
-function ResultCard({ item, query }: { item: SearchResult; query: string }) {
+function ResultCard({ item, query, getSourceColor }: { item: SearchResult; query: string; getSourceColor: (s: string) => string }) {
   const date = new Date(item.pubDate).toLocaleDateString("zh-CN", {
     month: "short",
     day: "numeric",
@@ -184,10 +219,18 @@ function ResultCard({ item, query }: { item: SearchResult; query: string }) {
       }}
     >
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs" style={{ color: "var(--accent-text, #60a5fa)" }}>
+        <span
+          className="text-[11px] font-medium rounded px-1.5 py-0.5"
+          style={{ color: getSourceColor(item.source), backgroundColor: "var(--badge-bg)" }}
+        >
           {item.source}
         </span>
         <span className="text-[10px]" style={{ color: "var(--text-dim)" }}>{date}</span>
+        {item.score && item.score > 0 && (
+          <span className="text-[10px]" style={{ color: "var(--text-dim)" }}>
+            {item.score > 1000 ? `${(item.score / 1000).toFixed(1)}k` : item.score} {item.source === "GitHub" ? "⭐" : "↑"}
+          </span>
+        )}
       </div>
       <h3 className="font-medium text-base leading-snug" style={{ color: "var(--text-primary)" }}>
         {highlight(item.title)}
