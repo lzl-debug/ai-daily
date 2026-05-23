@@ -6,32 +6,68 @@ const RSS_SOURCES: Record<string, string[]> = {
   "frontend-ai": [
     "https://github.blog/changelog/feed/",
     "https://blog.google/technology/ai/rss/",
+    "https://code.visualstudio.com/feed.xml",
+    "https://devblogs.microsoft.com/typescript/feed/",
   ],
   "backend-ai": [
     "https://www.anthropic.com/feed.xml",
     "https://openai.com/blog/rss.xml",
+    "https://blog.google/technology/ai/rss/",
+    "https://aws.amazon.com/blogs/machine-learning/feed/",
   ],
   "research": [
     "https://rss.arxiv.org/rss/cs.AI",
+    "https://rss.arxiv.org/rss/cs.CL",
+    "https://rss.arxiv.org/rss/cs.LG",
+    "https://deepmind.google/blog/rss.xml",
   ],
   "tools": [
     "https://www.producthunt.com/feed?category=artificial-intelligence",
+    "https://alternativeto.net/news/feed/",
   ],
   "ai-tips": [
     "https://simonwillison.net/atom/everything/",
+    "https://lilianweng.github.io/index.xml",
+    "https://www.latent.space/feed",
   ],
   "ai-education": [
-    "https://www.freecodecamp.org/news/rss/"
+    "https://www.freecodecamp.org/news/rss/",
+    "https://machinelearningmastery.com/feed/",
+    "https://towardsdatascience.com/feed",
   ],
-  "ai-influencers": [],
+  "ai-influencers": [
+    "https://karpathy.ai/feed.xml",
+    "https://simonwillison.net/atom/everything/",
+    "https://lmsys.org/blog/feed.xml",
+  ],
   "ai-video": [
     "https://runwayml.com/feed.xml",
+    "https://stability.ai/blog?format=rss",
+    "https://openai.com/blog/rss.xml",
   ],
-  "ai-ecosystem": [],
-  "open-source": [],
-  "open-source-top": [],
-  "ai-design": [],
-  "industry": [],
+  "ai-ecosystem": [
+    "https://github.blog/changelog/feed/",
+    "https://www.anthropic.com/feed.xml",
+  ],
+  "open-source": [
+    "https://github.blog/feed/",
+    "https://huggingface.co/blog/feed.xml",
+    "https://ollama.com/blog/feed",
+  ],
+  "open-source-top": [
+    "https://github.blog/feed/",
+    "https://huggingface.co/blog/feed.xml",
+  ],
+  "ai-design": [
+    "https://stability.ai/blog?format=rss",
+    "https://openai.com/blog/rss.xml",
+  ],
+  "industry": [
+    "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "https://venturebeat.com/category/ai/feed/",
+    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "https://www.wired.com/feed/tag/ai/latest/rss",
+  ],
 };
 
 let cachedNews: any[] | null = null;
@@ -110,29 +146,35 @@ export async function GET(request: Request) {
   // Fetch fresh RSS data if cache expired
   const now = Date.now();
   if (!cachedNews || now - lastFetchTime > CACHE_TTL) {
-    // Fetch RSS with timeout
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5000);
+    const timeout = setTimeout(() => controller.abort(), 8000);
 
-    const freshItems: any[] = [];
-    const catEntries = Object.entries(RSS_SOURCES);
-
-    for (const [cat, sources] of catEntries) {
+    const fetchTasks: Promise<{ cat: string; items: any[] }>[] = [];
+    for (const [cat, sources] of Object.entries(RSS_SOURCES)) {
       for (const url of sources) {
-        const items = await fetchRSS(url, controller.signal);
-        items.forEach((item) => {
-          item.category = cat;
-          const isDuplicate = seedData.some(
-            (s: any) => s.title === item.title
-          ) || freshItems.some((f) => f.title === item.title);
-          if (!isDuplicate && item.title !== "Untitled") {
-            freshItems.push(item);
-          }
-        });
+        fetchTasks.push(
+          fetchRSS(url, controller.signal).then((items) => ({ cat, items }))
+        );
       }
     }
 
+    const results = await Promise.allSettled(fetchTasks);
     clearTimeout(timeout);
+
+    const freshItems: any[] = [];
+    const seenTitles = new Set(seedData.map((s: any) => s.title));
+
+    for (const r of results) {
+      if (r.status !== "fulfilled") continue;
+      const { cat, items } = r.value;
+      for (const item of items) {
+        item.category = cat;
+        if (!seenTitles.has(item.title) && item.title !== "Untitled") {
+          seenTitles.add(item.title);
+          freshItems.push(item);
+        }
+      }
+    }
 
     cachedNews = [...freshItems, ...seedData].sort(
       (a, b) => new Date(b.pubDate || 0).getTime() - new Date(a.pubDate || 0).getTime()
